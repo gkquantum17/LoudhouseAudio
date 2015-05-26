@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Loudhouse</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style>
+		#loud{
+			color: #6AB5FF;
+			font-size: 1.8em;
+		}
+		#house{
+			color: #FFAD5B;
+			font-size: 1.8em;
+		}
+		#topContainer{
+			width: 100%;
+			background-image: url("LHB.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;	
+			
+		}
+		#topRow{
+			margin-top: 70px;
+			text-align: center;
+	
+		}
+		#topRow h1{
+			font-size: 500%;
+			padding: 0;
+			margin: 0;
+		}
+		#topRow p{
+			color: #6AB5FF;
+			margin: 0;
+			padding: 0;
+			font-size: 160%;
+		}
+		.headerLoud{
+			color: #6AB5FF;
+		}
+		.headerHouse{
+			color: #FFAD5B;
+		}
+		#topRow h5{
+			margin-top: 50px;
+			font-size: 180%;
+			color: #1e8acc;
+		}
+		.rev{
+			color: #FFAD5B;
+		}
+		.join a{
+			position: relative; 
+			top: 55px;
+			color: #1e8acc;
+			font-size: 1.3em;
+			border: 3px solid #1e8acc;
+			padding: 7px;
+			background-color: #E0F8F7;
+			opacity: .8;
+			border-radius: 10px;
+			
+		}
+		.join a:hover {
+			text-decoration: none;
+			color: #FFAD5B;
+			
+			border-color: #FFAD5B;
+		}
+		#topRow h3{
+			margin-top: 55px;
+			color: #6AB5FF;
+			font-size: 1.5em;
+			
+		}
+		#topRow h3 a {
+			padding: 0 10px 0 10px;
+			color: #1e8acc;
+			font-weight: bold;
+		}
+		#topRow h3 a:hover{
+			text-decoration: none;
+			color: #FFAD5B;
+		}
+		.center{
+			text-align: center;
+		}
+		.leftAlign{
+			text-align: left;
+		}
+		.title{
+			margin-top: 20px;
+			font-size: 300%;
+		}
+		#stepIcon img{
+			margin: 0;
+			padding: 0;
+			height: 15em;
+		}
+		#record{
+			position: relative;
+			top: -17.5px;
+		}
+		#edit{
+			position: relative;
+			top: 22px;
+		}
+		#connect{
+			position: relative;
+			top: 5px;
+		}
+		#share{
+			position: relative;
+			top: 20px;
+		}
+		#stepIcon p{
+			margin-top: -20px;
+		}
+		.emphasis{
+			font-weight: bold;
+			color: orange;
+		}
+		.learnMore{
+			margin-top: 170px;
+			
+		}
+		.learnMore a {
+			background-color: #E0F8F7;
+			border-radius: 10px;
+			border: 2px solid #1e8acc; 
+			opacity: .8; 
+			padding: 5px;
+			color: #1e8acc;
+		}
+		.learnMore a:hover{
+			border: 2px solid orange;
+			color: orange;
+			text-decoration: none;
+		}
+		#recordContainer{
+			background-color: #A9E2F3;
+			width: 100%;
+		}
+		#recordContainer h1{
+			margin-left: 40px;
+			padding: 0;
+		}
+		#recordContainer img{
+			height: 50em;
+			margin-top: -140px;
+			margin-bottom: -170px;
+			padding: 0;
+		}
+		#recordContainer p{
+			font-size: 1.5em;
+			margin-left: 40px;
+		}
+		#uploadContainer{
+			background-color: #F7BE81;
+			width: 100%;
+		}
+		#uploadContainer img{
+			height: 40em;
+			margin-top: -40px;
+			margin-bottom: -125px;
+		}
+		#uploadContainer h1{
+			margin-right: 40px;
+			padding: 0;
+			text-align: right;
+		}
+		#uploadContainer p{
+			font-size: 1.5em;
+			margin-right: 40px;
+			padding: 0;
+		}
+		#editContainer{
+			background-color: #A9E2F3;
+			width: 100%;
+		}
+		#editContainer h1{
+			margin-left: 40px;
+			padding: 0;	
+		}
+		#editContainer img{
+			margin-top: -80px;
+			margin-bottom: -300px;
+		}
+		#editContainer p{
+			font-size: 1.5em;
+			margin-left: 40px;
+		}
+		#connectContainer{
+			background-color: #F7BE81;
+			width: 100%;
+		}
+		#connectContainer h1{
+			margin-right: 40px;
+			padding: 0;
+			text-align: right;
+		}
+		#connectContainer p{
+			font-size: 1.5em;
+			margin-right: 40px;
+		}
+		#connectContainer img{
+			height: 40em;
+			margin-top: -50px;
+			margin-bottom: -150px;
+		}
+		#shareContainer{
+			background-color: #A9E2F3;
+			width: 100%;
+		}
+		#shareContainer h1{
+			margin-left: 40px;
+			padding: 0;
+		}
+		#shareContainer p{
+			font-size: 1.5em;
+			margin-left: 40px ;
+		}
+		#shareContainer img{
+			height: 40em;
+			margin-left: 80px;
+			margin-bottom: -150px;
+		}
+		#repeatContainer{
+			background-color: #F7BE81;
+			width: 100%;
+		}
+		#repeatContainer h1{
+			margin-left: 280px;
+			padding: 0;
+		}
+		#repeatContainer p{
+			font-size: 1.5em;
+			margin-left: -40px;
+		}
+		#repeatContainer img{
+			height: 45em;
+			margin-top: -120px;
+			padding: 0;
+			margin-bottom: -175px;
+		}
+		#footer{
+			background-color: #2E2E2E;
+			padding-bottom: 20px;
+			width: 100%;
+			text-align: center;
+		}
+		#footer h2{
+			font-size: 2.5em;
+		}
+		#footer h3{
+			color: #6AB5FF;
+		}
+		#footer p{
+			color: white;
+			padding: 0;
+			margin: 0;
+		}
+		#footer img{
+			height: 2.5em;
+			padding-left: 10px;
+		}
+		#footer img:hover{
+			height: 3em;
+		}
+	</style>
+  </head>
+  <body data-spy="scroll" data-target=".navbar-collapse">
+	<div class = "navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class = "navbar-header">
+				<a href ="" class = "navbar-brand"><span id = "loud">Loud</span><span id = "house">house</span> </a>
+				<button type = "button" class = "navbar-toggle" data-toggle="collapse"
+				data-target=".navbar-collapse">
+				<span class = "sr-only">Toggle navigation</span>
+				
+				<span class = "icon-bar"></span>
+				<span class = "icon-bar"></span>
+				<span class = "icon-bar"></span>
+			</div>
+			<div class = "collapse navbar-collapse">
+				<ul class = "nav navbar-nav">
+					<li class = "active"><a href = "#topContainer">Home</a></li>
+					<li><a href = "About.html">About</a></li>
+					<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Platform <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+						<li><a href="#recordContainer2">Record</a></li>
+						<li><a href="#uploadContainer2">Upload</a></li>
+						<li><a href="#editContainer2">Edit</a></li>
+						<li><a href="#connectContainer2">Connect</a></li>
+						<li><a href="#shareContainer2">Share</a></li>
+						<li><a href="#repeatContainer2">Repeat</a></li>
+						</ul>
+					<li>
+					<li><a href = "">Contact</a></li>
+					
+				</ul>
+				
+				<form class = "navbar-form navbar-right">
+					<div class = "form-group">
+						<input type = "email" placeholder = "Email" class = "form-control" />
+					</div>
+					<div class = "form-group">
+						<input type = "password" placeholder = "Password" class = "form-control" />
+					</div>
+					<button type = "submit" class = "btn btn-primary">Login</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class = "container contentContainer" id = "topContainer">
+		<div class = "row">
+			<div class = "col-md-6 col-md-offset-3" id = "topRow">
+			<h1><span class = "headerLoud">Loud</span><span class = "headerHouse">house</span> </h1>
+			<p>Music Production. <span class = "rev">Revolutionized.</span> </p>
+			<h5> Merging the world of social  media with music creation </h5>
+			<h3><a href = ""> Record.</a><a href = "">Upload.</a><a href = "">Edit.</a><a href = "">Connect.</a><a href = "">Share.</a> <a href = "">Repeat.</a> </h3>
+			<p class = "join" ><a href = ""  data-toggle="modal" data-target="#myModal">
+			Join Us 
+			</a></p>
+			<h4 class = "learnMore"><a href = "#platformContainer" > Learn More 
+			 <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></h4>
+			
+		<div class = "modal" id = "myModal">
+			<div class = "modal-dialog">
+				<div class = "modal-content">
+					<div class = "modal-header">
+						<button class = "close" data-dismiss = "modal"> x </button>
+					<h4 class = "modal-title">Join Us</h4>
+					</div>
+					<div class = "modal-body">
+						<form>
+							Coming soon! 
+						</form>
+					</div>
+					<div class = "modal-footer">
+								<button class = "btn btn-default" data-dismiss = "modal">Close</button>
+								
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div id = "platformContainer"></div>
+		</div>
+	</div>
+	</div>
+	<div class = "container contentContainer" >
+		<div class = "row" class = "center">
+			<h1 class = "title center">The Loudhouse Platform</h1>
+			<p class = "lead center"> Loudhouse is a social networking platform which enables recreational and professional music artists
+			from around the world to capture and share their spontaneous, musical ideas, which they can then turn into original music,
+			together.
+			
+		</div>
+		<div class = "row center" id = "stepIcon">
+			<div class = "col-md-2 box">
+				<h3> Step One </h3> 
+				<img src = "recordIcon.gif" id = "record" class = "center" />
+				<p> <span class = "emphasis">Record</span> your spontaneous musical ideas using any mobile device. </p>
+			</div>
+			<div class = "col-md-2 box">
+				<h3> Step Two </h3>
+				<img src = "uploadIcon.gif" id = "upload" />
+				<p> <span class = "emphasis">Upload</span> your recording to your Loudhouse online profile with the click of a button. </p>
+			</div>
+			<div class = "col-md-2 box">
+				<h3> Step Three </h3>
+				<img src = "editIcon.gif" id = "edit" />
+				<p> <span class = "emphasis">Edit</span> your recording using Loudhouse's built-in, audio-editing software. </p>
+			</div>
+			<div class = "col-md-2 box">
+				<h3> Step Four </h3>
+				<img src = "connectIcon.gif" id = "connect" />
+				<p> <span class = "emphasis">Connect </span>with other Loudhouse users using the built-in social networking feature. </p>
+			</div>
+			<div class = "col-md-2 box">
+				<h3> Step Five </h3>
+				<img src = "shareIcon.gif" id = "share" />
+				<p><span class = "emphasis"> Share</span> your piece with your Loudhouse network so they can add on to your unfinished song. </p>
+			</div>
+			<div class = "col-md-2 box">
+				<h3> Step Six </h3>
+				<img src = "repeatIcon.gif" id = "repeat" />
+				<p> <span class = "emphasis">Repeat</span> until you finish your awesome song! </p>
+			</div>
+		</div>
+		<div id = "recordContainer2" ></div>
+	</div>
+	
+	<div class = "container" id = "recordContainer">
+		<div class = "row">
+			<div class = "col-md-6 box">
+				<h1> Step One: Record </h1>
+				<p> Brilliant musical ideas come unpredictably - whether you're with out with your friends, in school, at work, or on the road. Be prepared to record those unique, spontaneous
+				musical chimes, rhymes, and lyrics on the go with the Loudhouse mobile app. This recording will become one of many musical ideas that you will have stockpiled
+				and have ready to pick from as you get ready to make your next song. 
+				<em>(The mobile application is in development and will become available soon for the Apple, Android, and Windows platforms.)</em></p>
+			</div>
+			<div class = "col-md-6 box">
+				<img class = "recordFull" src = "recordfull.gif" />
+			</div>
+			<div id = "uploadContainer2" ></div>
+		</div>
+	
+	</div>
+	<div class = "container" id = "uploadContainer">
+		<div class = "row">
+			<div class = "col-md-6 box">
+				<img class = "uploadFull" src = "uploadFull.gif" />
+			</div>
+			<div class = "col-md-6 box">
+				<h1> Step Two: Upload </h1>
+				<p> With the click of a button, you can upload your recorded musical piece to your Loudhouse account. You will have access to all of your recorded music
+				on your account for you to choose from. </p>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	<div class = "container" id = "editContainer">
+		<div class = "row">
+			<div class = "col-md-6 box">
+				<h1> Step Three: Edit </h1>
+				<p> Here's the fun part! With your Loudhouse account, you can use our built-in, professional audio-editing software to edit or recreate one of your stockpiled, recorded audio
+				pieces - or even start fresh with a completely new musical piece! Our editing software is incredibly user-friendly, easy to learn, and has all the tools necessary to make your
+				song stand out among your competitors. Save your musical piece - whether a full song or just a verse or chorus - so you can easily edit or add to it later! </p>
+			</div>
+			<div class = "col-md-6 box">
+				<img class = "editFull" src = "editFull.gif" />
+			</div>
+		</div>
+	</div>
+	<div class = "container" id = "connectContainer">
+		<div class = "row">
+			<div class = "col-md-6 box">
+				<img class = "connectFull" src = "connectFull.gif" />
+			</div>
+			<div class = "col-md-6 box">
+				<h1> Step Four: Connect </h1>
+				<p> As a social networking site, we enable you to search for and connect with other Loudhouse users from around the world. Add them to your Loudhouse Network so that
+				you can work with them on future songs, ask for feedback, be a part of an amazing group of musicians like you, and even do a few more awesome things that we will show you in the next step! </p>
+			</div>
+		</div>
+	</div>
+	<div class = "container" id = "shareContainer">
+		<div class = "row">
+			<div class = "col-md-6 box">
+				<h1> Step Five: Share </h1>
+				<p> With your Loudhouse Network that we told you about in the previous step, you can take advantage of our core innovation. You can share your recorded or edited musical pieces, 
+					even as an uncompleted song, with your network. But the Loudhouse platform doesn't just let users merely listen to the music that others created, we empower our listeners to become the creators.
+					Loudhouse enables other users to edit and even contribute to your musical ideas, and vice versa -- allowing for users from around the world to collaborate to create original music, together.</p>
+			</div>
+			<div class = "col-md-6 box">
+				<img class = "shareFull" src = "shareFull.gif" />
+			</div>
+		</div>
+	</div>
+	<div class = "container" id = "repeatContainer">
+		<div class = "row">
+			<div class = "col-md-6 box">
+				<img class = "repeatFull" src = "repeatFull.gif" />
+			</div>
+			<div class = "col-md-6 box">
+				<h1> Step Six: Repeat </h1>
+				<p> Repeat these steps until you are satisfied with your song! What if your song becomes a hit? Check out the royalties contract here! </p>
+			</div>
+		</div>
+		
+	</div>
+	<div class = "container" id = "footer">
+		<div class = "row">
+			<div class = "col-md-12 box">
+				<h2><span class = "headerLoud">Loud</span><span class = "headerHouse">house</span> </h2>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col-md-4 box">
+				<h3> Contact Us </h3>
+				<p> Email us at contact@loudhouseaudio.com! </p>
+			</div>
+			<div class = "col-md-4 box">
+				<h3> Follow Us </h3>
+				<a href = "" ><img src = "fb.png" /></a><a href = "" ><img src = "twitter.png" /></a><a href = "" ><img src = "linkedin.png" /></a><a href = "" ><img src = "google.png" /></a>
+			</div>
+				<div class = "col-md-4 box">
+				<h3> Music Production. Revolutionized. </h3>
+				<p> &copy; Loudhouse, LLC. All Rights Reserved </p>
+				<p> Terms of Use / Privacy Policy </p>
+			</div>
+		</div>
+	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script>
+		$(".contentContainer").css("min-height", $(window).height());
+	</script>
+  </body>
+</html>
